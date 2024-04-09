@@ -8,12 +8,14 @@ const FormularioContato = () => {
   const [cidade, setcidade] = useState('');
   const [mensagem, setMensagem] = useState('');
   const [whatsapp, setwhatsapp] = useState('');
+  const [nomeAmigo, setnomeAmigo] = useState('');
+  const [cpfAmigo, setcpfAmigo] = useState('');
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', e.target, 'SEU_USER_ID')
+    emailjs.sendForm('gmailMessage', 'template_s0n3fmq', e.target, 'ieaebn5vLF1l8PvsY')
       .then((result) => {
         console.log(result.text);
         setEnviado(true);
@@ -39,14 +41,14 @@ const FormularioContato = () => {
             <label htmlFor="cidade">Cidade em que reside:</label>
             <input type="text" id="cidade" name="cidade" value={cidade} onChange={(e) => setcidade(e.target.value)} required />
 
-            <label htmlFor="nome">Whatsapp (Com DDD EX: 8700000000):</label>
+            <label htmlFor="whatsapp">Whatsapp (Com DDD EX: 8700000000):</label>
             <input type="text" id="whatsapp" name="whatsapp" value={whatsapp} onChange={(e) => setwhatsapp(e.target.value)} required />
 
             <label htmlFor="nomeAmigo">Nome do Amigo que indicou:</label>
-            <input type="text" id="nomeAmigo" name="nomeAmigo" required />
+            <input type="text" id="nomeAmigo" name="nomeAmigo" value={nomeAmigo} onChange={(e) => setnomeAmigo(e.target.value)} required />
 
-            <label htmlFor="emailAmigo">CPF do Amigo que indicou:</label>
-            <input type="email" id="emailAmigo" name="emailAmigo" required />
+            <label htmlFor="cpfAmigo">CPF do Amigo que indicou:</label>
+            <input type="cpfAmigo" id="cpfAmigo" name="cpfAmigo" value={cpfAmigo} onChange={(e) => setcpfAmigo(e.target.value)} required />
 
             <label htmlFor="mensagem">Mensagem de observação (opcional):</label>
             <textarea id="mensagem" name="mensagem" value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows="4"></textarea>
