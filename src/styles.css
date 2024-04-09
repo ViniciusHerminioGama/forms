@@ -89,4 +89,22 @@
     margin-top: 200px; /* Defina a margem superior desejada */
   }
   
+
+  /* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+    
+    .form {
+      width: 100%;
+    }
+  
+    .image-container {
+      margin-top: 20px;
+    }
+  
+    /* Adicione mais estilos conforme necessário */
+  }
+  
   
