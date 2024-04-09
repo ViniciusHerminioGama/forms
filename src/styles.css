@@ -88,6 +88,40 @@
   .image-container {
     margin-top: 450px; /* Defina a margem superior desejada */
   }
+
+  .regulamento-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    font-size: 16px;
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+  }
+  
+  .regulamento-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+  }
+  
+  .voltar-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    font-size: 16px;
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+  }
+  
+  .voltar-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+  }
+  
+  .regulamento-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  
   
 
   /* Estilos para dispositivos móveis */

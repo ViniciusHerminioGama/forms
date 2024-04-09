@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importar o Link do react-router-dom
 import emailjs from 'emailjs-com';
 import './styles.css';
-import banner from './images/indiqueeganhe.png'; // Importe a imagem aqui
+import banner from './images/indiqueeganhe.png'; // Importar a imagem aqui
 
 const FormularioContato = () => {
   const [nome, setNome] = useState('');
@@ -43,7 +44,7 @@ const FormularioContato = () => {
 
   return (
     <div className="container">
-      <div className="image-container"> {/* Div que contém a imagem */}
+      <div className="image-container">
         <img src={banner} alt="Minha Imagem" style={{ maxWidth: '100%', height: 'auto' }} />
       </div>
       <h2>Indique um Amigo e Ganhe</h2>
@@ -80,6 +81,7 @@ const FormularioContato = () => {
           </>
         )}
       </form>
+      <Link to="/regulamento" className="regulamento-link">Regulamento indique e ganhe</Link>
     </div>
   );
 };
