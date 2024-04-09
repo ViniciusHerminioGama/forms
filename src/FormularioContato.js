@@ -5,14 +5,19 @@ import banner from './images/indiqueeganhe.png'; // Importe a imagem aqui
 
 const FormularioContato = () => {
   const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
+  const [cpf, setcpf] = useState('');
+  const [nomeAmigo, setnomeAmigo] = useState('');
+  const [cpfAmigo, setcpfAmigo] = useState('');
+  const [cidadeAmigo, setcidadeAmigo] = useState('');
+  const [enderecoAmigo, setenderecoAmigo] = useState('');
+  const [whatsappAmigo, setwhatsappAmigo] = useState('');
   const [mensagem, setMensagem] = useState('');
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', e.target, 'SEU_USER_ID')
+    emailjs.sendForm('gmailMessage', 'template_s0n3fmq', e.target, 'ieaebn5vLF1l8PvsY')
       .then((result) => {
         console.log(result.text);
         setEnviado(true);
@@ -32,17 +37,26 @@ const FormularioContato = () => {
           <p className="success-message">Obrigado! Sua indicação foi enviada com sucesso.</p>
         ) : (
           <>
-            <label htmlFor="nome">Seu Nome:</label>
+            <label htmlFor="nome">Nome do cliente oxente:</label>
             <input type="text" id="nome" name="nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
 
-            <label htmlFor="email">Seu Email:</label>
-            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <label htmlFor="cpf">CPF do cliente oxente:</label>
+            <input type="text" id="cpf" name="cpf" value={cpf} onChange={(e) => setcpf(e.target.value)} required />
 
-            <label htmlFor="nomeAmigo">Nome do Amigo:</label>
-            <input type="text" id="nomeAmigo" name="nomeAmigo" required />
+            <label htmlFor="nomeAmigo">Nome do Amigo que irá indicar:</label>
+            <input type="text" id="nomeAmigo" name="nomeAmigo" value={nomeAmigo} onChange={(e) => setnomeAmigo(e.target.value)} required />
 
-            <label htmlFor="emailAmigo">Email do Amigo:</label>
-            <input type="email" id="emailAmigo" name="emailAmigo" required />
+            <label htmlFor="cpfAmigo">CPF do Amigo que irá indicar:</label>
+            <input type="number" id="cpfAmigo" name="cpfAmigo" value={cpfAmigo} onChange={(e) => setcpfAmigo(e.target.value)} required />
+
+            <label htmlFor="cidadeAmigo">Cidade em que o Amigo que irá indicar reside:</label>
+            <input type="text" id="cidadeAmigo" name="cidadeAmigo" value={cidadeAmigo} onChange={(e) => setcidadeAmigo(e.target.value)} required />
+
+            <label htmlFor="enderecoAmigo">Endereço do Amigo que irá indicar:</label>
+            <input type="text" id="enderecoAmigo" name="enderecoAmigo" value={enderecoAmigo} onChange={(e) => setenderecoAmigo(e.target.value)} required />
+            
+            <label htmlFor="whatsappAmigo">Whatsapp do Amigo que irá indicar:</label>
+            <input type="enderecoAmigo" id="whatsappAmigo" name="whatsappAmigo" value={whatsappAmigo} onChange={(e) => setwhatsappAmigo(e.target.value)} required />
 
             <label htmlFor="mensagem">Mensagem (opcional):</label>
             <textarea id="mensagem" name="mensagem" value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows="4"></textarea>
