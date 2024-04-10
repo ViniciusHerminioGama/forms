@@ -5,10 +5,11 @@ import './styles.css'; // Importe seus estilos CSS aqui
 
 const RegulamentoCampanha = () => {
   return (
-    <div className="regulamento-container">
+    <div className="regulamento-container-max">
       <h2>Regulamento Campanha indique um amigo e ganhe desconto</h2>
       <p>Data: 25.03.2024</p>
       <p>Promoção Indique amigo e ganhe desconto em sua mensalidade.</p>
+      <div className="regulamento-container">
       <ol>
         <li>A campanha de indicação só é válida para clientes pessoa física ativos e adimplentes.</li>
         <li>A promoção só é válida a partir do dia 01 de abril de 2024, por tempo indeterminado, até que a empresa comunique o encerramento da mesma;</li>
@@ -18,6 +19,7 @@ const RegulamentoCampanha = () => {
         <li>Não é permitido ressarcimento em valor (dinheiro) ao cliente, o benefício é apenas desconto em mensalidades e limitado ao serviço de conexão à internet;</li>
       </ol>
       <Link to="/" className="voltar-link">Voltar à página principal</Link>
+    </div>
     </div>
   );
 };
