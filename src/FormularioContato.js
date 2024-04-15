@@ -63,9 +63,6 @@ const FormularioContato = () => {
 
             <label htmlFor="cidadeAmigo">Cidade em que o Amigo que irá indicar reside:</label>
             <input type="text" id="cidadeAmigo" name="cidadeAmigo" value={cidadeAmigo} onChange={(e) => setCidadeAmigo(e.target.value)} required />
-
-            <label htmlFor="enderecoAmigo">Endereço do Amigo que irá indicar:</label>
-            <input type="text" id="enderecoAmigo" name="enderecoAmigo" value={enderecoAmigo} onChange={(e) => setEnderecoAmigo(e.target.value)} required />
             
             <label htmlFor="whatsappAmigo">Whatsapp do Amigo que irá indicar:</label>
             <input type="text" id="whatsappAmigo" name="whatsappAmigo" value={formatarTelefone(whatsappAmigo)} onChange={(e) => setWhatsappAmigo(e.target.value)} maxLength={15} required />
