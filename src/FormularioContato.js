@@ -9,7 +9,6 @@ const FormularioContato = () => {
   const [cpf, setCpf] = useState('');
   const [nomeAmigo, setNomeAmigo] = useState('');
   const [cidadeAmigo, setCidadeAmigo] = useState('');
-  const [enderecoAmigo, setEnderecoAmigo] = useState('');
   const [whatsappAmigo, setWhatsappAmigo] = useState('');
   const [mensagem, setMensagem] = useState('');
   const [enviado, setEnviado] = useState(false);
