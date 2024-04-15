@@ -8,7 +8,6 @@ const FormularioContato = () => {
   const [nome, setNome] = useState('');
   const [cpf, setCpf] = useState('');
   const [nomeAmigo, setNomeAmigo] = useState('');
-  const [cpfAmigo, setCpfAmigo] = useState('');
   const [cidadeAmigo, setCidadeAmigo] = useState('');
   const [enderecoAmigo, setEnderecoAmigo] = useState('');
   const [whatsappAmigo, setWhatsappAmigo] = useState('');
@@ -61,9 +60,6 @@ const FormularioContato = () => {
 
             <label htmlFor="nomeAmigo">Nome do Amigo que irá indicar:</label>
             <input type="text" id="nomeAmigo" name="nomeAmigo" value={nomeAmigo} onChange={(e) => setNomeAmigo(e.target.value)} required />
-
-            <label htmlFor="cpfAmigo">CPF do Amigo que irá indicar:</label>
-            <input type="text" id="cpfAmigo" name="cpfAmigo" value={formatarCPF(cpfAmigo)} onChange={(e) => setCpfAmigo(e.target.value)} maxLength={14} required />
 
             <label htmlFor="cidadeAmigo">Cidade em que o Amigo que irá indicar reside:</label>
             <input type="text" id="cidadeAmigo" name="cidadeAmigo" value={cidadeAmigo} onChange={(e) => setCidadeAmigo(e.target.value)} required />
